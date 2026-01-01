@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: 5px;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
@@ -9,4 +9,13 @@ body {
   height: 100%;
   color: white;
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button,
+h2 {
+  margin: 5px;
+  padding: 5px;
 }
