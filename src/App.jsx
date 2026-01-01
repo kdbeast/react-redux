@@ -7,6 +7,7 @@
 // import { useState } from "react";
 import Tabs from "./components/Tabs";
 import SearchBar from "./components/SearchBar";
+import ResultGrid from "./components/ResultGrid";
 
 function App() {
   // const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function App() {
     <div className="h-screen bg-gray-950 text-white ">
       <SearchBar />
       <Tabs />
+      <ResultGrid />
     </div>
   );
 }

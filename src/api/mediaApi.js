@@ -37,7 +37,7 @@ export async function getPexelsVideos(query, per_page = 20) {
       },
     })
     .then((res) => {
-      const data = res.data.videos;
+      const data = res.data;
       return data;
     })
     .catch((err) => {
