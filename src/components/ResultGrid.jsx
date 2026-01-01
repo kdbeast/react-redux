@@ -50,18 +50,26 @@ const ResultGrid = () => {
   }, [activeTab, query, dispatch]);
 
   if (loading) {
-    return <div className="flex justify-center items-center h-full w-full">Loading...</div>;
+    return (
+      <div className="flex justify-center items-center text-2xl font-semibold h-full w-full">
+        Loading...
+      </div>
+    );
   }
 
   if (error) {
-    return <div className="flex justify-center items-center h-full w-full">Error: {error}</div>;
+    return (
+      <div className="flex justify-center items-center text-2xl font-semibold h-full w-full">
+        Error: {error}
+      </div>
+    );
   }
 
   return (
     <div className="flex justify-between w-full flex-wrap gap-6 overflow-auto px-10">
       {results.map((item, idx) => {
         return (
-          <div key={idx}>
+          <div className="p-2 m-2" key={idx}>
             <ResultCard item={item} />
           </div>
         );

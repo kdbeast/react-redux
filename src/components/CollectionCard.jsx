@@ -1,16 +1,15 @@
 import { useDispatch } from "react-redux";
-import { addCollection } from "../redux/features/collectionSlice";
+import { removeCollection } from "../redux/features/collectionSlice";
 
-const ResultCard = ({ item }) => {
+const CollectionCard = ({ item }) => {
   const dispatch = useDispatch();
 
-  const addToCollection = () => {
-    dispatch(addCollection(item));
+  const removeFromCollection = (item) => {
+    dispatch(removeCollection(item.id));
   };
-
   return (
     <div className="w-[18vw] relative h-80 bg-white rounded-xl overflow-hidden">
-      <a target="_blank" className="h-full" href={item.src}>
+      <a target="_blank" className="h-full" href={item.url}>
         {item.type == "photo" ? (
           <img
             className="h-full w-full object-cover object-center"
@@ -50,15 +49,15 @@ const ResultCard = ({ item }) => {
         </h2>
         <button
           onClick={() => {
-            addToCollection(item);
+            removeFromCollection(item);
           }}
           className="bg-indigo-600 active:scale-95 text-white rounded px-3 py-1 cursor-pointer font-medium"
         >
-          Save
+          Remove
         </button>
       </div>
     </div>
   );
 };
 
-export default ResultCard;
+export default CollectionCard;
