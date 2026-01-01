@@ -5,7 +5,7 @@
 //   incrementByAmount,
 // } from "./redux/features/counterSlice";
 // import { useState } from "react";
-
+import Tabs from "./components/Tabs";
 import SearchBar from "./components/SearchBar";
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
     // </>
     <div className="h-screen bg-gray-950 text-white ">
       <SearchBar />
+      <Tabs />
     </div>
   );
 }
